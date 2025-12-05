@@ -7,7 +7,7 @@
 
 Visualiza las métricas y análisis de las herramientas de IA en nuestro dashboard interactivo:
 
-**[Ver Dashboard en Looker Studio](https://lookerstudio.google.com/s/te-HqUfRLug)**
+**[Ver Dashboard en Looker Studio](https://lookerstudio.google.com/reporting/a1b47e70-acaf-47ed-9c6b-125e820af759)**
 
 ---
 
