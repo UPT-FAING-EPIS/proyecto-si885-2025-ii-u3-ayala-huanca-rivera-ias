@@ -10,30 +10,30 @@
 
 **Escuela Profesional de Ingeniería de Sistemas**
 
-**Proyecto *{Nombre de Proyecto}***
+**Proyecto Herramientas de IA para Estudiantes de Ingeniería de Sistemas**
 
-Curso: *{Nombre de Asignatura}*
+Curso: SI885 - Sistemas de Información
 
-Docente: *{Nombre de Docente}*
+Docente: Por definir
 
 Integrantes:
 
-***{Apellidos y nombres del estudiante (código universitario)}***
+Ayala · Huanca · Rivera (códigos por definir)
 
 **Tacna – Perú**
 
-***{Año}***
+**2025**
 
 **  
 **
 </center>
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
-Sistema *{Nombre del Sistema}*
+Sistema Sistema de Gestión y Análisis de Herramientas de IA
 
 Informe de Factibilidad
 
-Versión *{1.0}*
+Versión 1.0
 
 |CONTROL DE VERSIONES||||||
 | :-: | :- | :- | :- | :- | :- |
@@ -77,23 +77,38 @@ Versión *{1.0}*
 
     1.1. Nombre del proyecto
 
+    Herramientas de IA para Estudiantes de Ingeniería de Sistemas.
+
     1.2. Duración del proyecto
+
+    Semestre académico 2025-II.
 
     1.3. Descripción
 
-        En que consiste el proyecto/importancia del mismo, contexto en que se va desenvolver
+    Proyecto académico que cataloga, evalúa y analiza plataformas de IA aplicables al desarrollo de software. Incluye un esquema de datos desplegable con Terraform en Google Cloud (Cloud SQL MySQL) y un dashboard analítico en Google Looker Studio para visualizar métricas de uso y comparativas entre servicios.
 
     1.4. Objetivos
 
         1.4.1 Objetivo general
-        1.4.2 Objetivos Específicos
-            Para cada objetivo específico se indicara que se va a lograr
+        Diseñar e implementar una solución académica para registrar y analizar el uso de herramientas de IA por estudiantes de Ingeniería de Sistemas, apoyando la toma de decisiones educativas.
+
+        1.4.2 Objetivos específicos
+        - Catalogar servicios de IA relevantes (Lovable, V0, Bolt.new, Cursor, Replit, Claude, GitHub Copilot).
+        - Desplegar una base de datos MySQL en Cloud SQL con IaC (Terraform).
+        - Definir un esquema que soporte usuarios, proyectos, evaluaciones y métricas.
+        - Construir visualizaciones en Looker Studio con indicadores clave.
+        - Documentar arquitectura, procesos y mejores prácticas de uso.
 
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
 2. <span id="_Toc52661347" class="anchor"></span>**Riesgos**
 
-    Señale los riesgos que pudieran afectar el éxito del proyecto.}*
+    - Dependencia de servicios de terceros (cambios de políticas, disponibilidad).
+    - Costos de nube superiores a lo estimado por uso o región.
+    - Limitaciones de seguridad y privacidad de datos académicos.
+    - Curva de aprendizaje de Terraform/GCP para el equipo.
+    - Conectividad a Internet inestable para despliegue y acceso.
+    - Falta de datos suficientes para análisis significativos.
 
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
@@ -101,130 +116,85 @@ Versión *{1.0}*
 
     3.1. Planteamiento del problema
 
-            Describa antecedentes y situación actual, explicando la problemática y/o necesidad que será resuelta con el proyecto propuesto.
+    La proliferación de herramientas de IA para programación dificulta elegir la más adecuada según contexto académico. No existe un repositorio institucional con métricas objetivas de uso y resultados, lo que limita la adopción informada y la evaluación pedagógica.
 
     3.2. Consideraciones de hardware y software
 
-            Hardware y software posibles para la implementación, se analizara lo que existe y es alcanzable, se evaluara que tecnología se puede > utilizar en el proyecto.
+    - Hardware: equipos estándar de estudiantes/docentes con conexión a Internet.
+    - Software: Google Cloud SDK, Terraform, cliente MySQL, Looker Studio.
+    - Nube: instancia Cloud SQL MySQL (db-f1-micro) con backups y Query Insights.
+    - Control de versiones: Git y GitHub.
 
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
-4. <span id="_Toc52661349" class="anchor"></span>**Estudio de
-    Factibilidad**
+4. <span id="_Toc52661349" class="anchor"></span>**Estudio de Factibilidad**
 
-    Describir los resultados que esperan alcanzar del estudio de factibilidad, las actividades que se realizaron para preparar la evaluación de factibilidad y por quien fue aprobado.
+    Se evaluaron aspectos técnicos, económicos y operativos del despliegue en GCP y el uso institucional del sistema de análisis.
 
     4.1. <span id="_Toc52661350" class="anchor"></span>Factibilidad Técnica
 
-        El estudio de viabilidad técnica se enfoca en obtener un entendimiento de los recursos tecnológicos disponibles actualmente y su aplicabilidad a las necesidades que se espera tenga el proyecto. En el caso de tecnología informática esto implica una evaluación del hardware y software y como este puede cubrir las necesidades del sistema propuesto.
-
-        Realizar una evaluación de la tecnología actual existente y la posibilidad de utilizarla en el desarrollo e implantación del sistema.*
-
-        Describir acerca del hardware (equipos, servidor), software (aplicaciones, navegadores, sistemas operativos, dominio, internet, infraestructura de red física, etc.
+    Tecnologías disponibles y suficientes: Terraform para IaC, Cloud SQL MySQL 8.0, cliente MySQL, Looker Studio. Requiere cuentas GCP con APIs habilitadas (sqladmin, compute, servicenetworking) y conexión a Internet. Se implementan backups automáticos y Query Insights; se recomienda red privada y `require_ssl` para producción.
 
     4.2. <span id="_Toc52661351" class="anchor"></span>Factibilidad Económica
 
-        El propósito del estudio de viabilidad económica, es determinar los beneficios económicos del proyecto o sistema propuesto para la organización, en contraposición con los costos.
-        Como se mencionó anteriormente en el estudio de factibilidad técnica wvaluar si la institución (departamento de TI) cuenta con las herramientas necesarias para la implantación del sistema y evaluar si la propuesta requiere o no de una inversión inicial en infraestructura informática.
-        Se plantearán los costos del proyecto.
-        Costeo del Proyecto: Consiste en estimar los costos de los recursos Humanos, materiales o consumibles y/o máquinas) directos para completar las actividades del proyecto}.*
+    Costos estimados de infraestructura mínima:
+    - Instancia Cloud SQL `db-f1-micro`: ~$7–10 USD/mes.
+    - Tráfico y almacenamiento: variables por uso; mínimo dentro del rango académico.
+    - Herramientas de IA: uso de planes gratuitos cuando sea posible.
+    - Personal: dedicación académica de estudiantes/docentes.
 
-        Definir los siguientes costos:
+    4.2.1. Costos Generales
+    Insumos y herramientas básicas (conectividad, equipo de cómputo ya disponible institucionalmente).
 
-        4.2.1. Costos Generales
+    4.2.2. Costos operativos durante el desarrollo
+    Conectividad y tiempo de laboratorio; sin alquileres adicionales.
 
-                Los costos generales son todos los gastos realizados en accesorios y material de oficina y de uso diario, necesarios para los procesos, tales como, papeles, plumas, cartuchos de impresora, marcadores, computadora etc. Colocar tabla de costos.
+    4.2.3. Costos del ambiente
+    Configuración de red, dominio institucional opcional, acceso controlado a la instancia.
 
-        4.2.2. Costos operativos durante el desarrollo 
-        
-                Evaluar costos necesarios para la operatividad de las actividades de la empresa durante el periodo en el que se realizara el proyecto. Los costos de operación pueden ser renta de oficina, agua, luz, teléfono, etc.
+    4.2.4. Costos de personal
+    Participación del equipo académico; no se requiere contratación externa.
 
-        4.2.3. Costos del ambiente
-
-                Evaluar si se cuenta con los requerimientos técnicos para la implantación del software como el dominio, infraestructura de red, acceso a internet, etc.
-
-        4.2.4. Costos de personal
-
-                Aquí se incluyen los gastos generados por el recurso humano que se necesita para el desarrollo del sistema únicamente.
-
-                No se considerará personal para la operación y funcionamiento del sistema.
-
-                Incluir tabla que muestra los gastos correspondientes al personal.
-
-                Indicar organización y roles. Indicar horario de trabajo del personal.
-
-        4.2.5.  Costos totales del desarrollo del sistema
-
-                {Totalizar costos y realizar resumen de costo final del proyecto y la forma de pago.
+    4.2.5. Costos totales del desarrollo del sistema
+    Bajo, dentro del presupuesto académico; se recomienda seguimiento mensual.
 
     4.3. <span id="_Toc52661352" class="anchor"></span>Factibilidad Operativa
 
-        Describir los beneficios del producto y si se tiene la capacidad por parte del cliente para mantener el sistema funcionando y garantizar el buen funcionamiento y su impacto en los usuarios. Lista de interesados.
+    El sistema apoya decisiones académicas, mejora el seguimiento de uso de IA y facilita comparativas. La institución cuenta con capacidad para operar y mantener el sistema con apoyo del área TI.
 
     4.4. <span id="_Toc52661353" class="anchor"></span>Factibilidad Legal
 
-        Determinar si existe conflicto del proyecto con restricciones legales como leyes y regulaciones del país o locales relacionadas con seguridad, protección de datos, conducta de negocio, empleo y adquisiciones.
+    Considera protección de datos personales (RGPD/LPDP), licencias de servicios de IA, y términos de uso de GCP. Se evitará almacenar información sensible.
 
-    4.5. <span id="_Toc52661354" class="anchor"></span>Factibilidad Social 
+    4.5. <span id="_Toc52661354" class="anchor"></span>Factibilidad Social
 
-        Evaluar influencias y asuntos de índole social y cultural como el clima político, códigos de conducta y ética*
+    Promueve uso responsable de IA, mejora el aprendizaje y la equidad de acceso.
 
     4.6. <span id="_Toc52661355" class="anchor"></span>Factibilidad Ambiental
 
-        Evaluar influencias y asuntos de índole ambiental como el impacto y repercusión en el medio ambiente.
+    Impacto ambiental bajo al ser infraestructura en la nube y documentación digital.
 
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
 5. <span id="_Toc52661356" class="anchor"></span>**Análisis Financiero**
 
-    El plan financiero se ocupa del análisis de ingresos y gastos asociados a cada proyecto, desde el punto de vista del instante temporal en que se producen. Su misión fundamental es detectar situaciones financieramente inadecuadas.
-    Se tiene que estimar financieramente el resultado del proyecto.
+    Plan financiero orientado al control de costos operativos de nube y al valor académico generado.
 
     5.1. Justificación de la Inversión
 
         5.1.1. Beneficios del Proyecto
 
-            El beneficio se calcula como el margen económico menos los costes de oportunidad, que son los márgenes que hubieran podido obtenerse de haber dedicado el capital y el esfuerzo a otras actividades.
-            El beneficio, obtenido lícitamente, no es sólo una recompensa a la inversión, al esfuerzo y al riesgo asumidos por el empresario, sino que también es un factor esencial para que las empresas sigan en el  mercado e incorporen nuevas inversiones al tejido industrial y social de las naciones.
-            Describir beneficios tangibles e intangibles*
-            Beneficios tangibles: son de fácil cuantificación, generalmente están relacionados con la reducción de recursos o talento humano.
-            Beneficios intangibles: no son fácilmente cuantificables y están relacionados con elementos o mejora en otros procesos de la organización.
->
-            Ejemplo de beneficios:
+        Beneficios tangibles: reducción de tiempo de desarrollo, consolidación de métricas, estandarización de evaluación, baja inversión en infraestructura.
+        Beneficios intangibles: mejor toma de decisiones académicas, mejora en la enseñanza de herramientas de IA, mayor adopción responsable.
 
-            - Mejoras en la eficiencia del área bajo estudio.
-            - Reducción de personal.
-            - Reducción de futuras inversiones y costos.
-            - Disponibilidad del recurso humano.
-            - Mejoras en planeación, control y uso de recursos.
-            - Suministro oportuno de insumos para las operaciones.
-            - Cumplimiento de requerimientos gubernamentales.
-            - Toma acertada de decisiones.
-            - Disponibilidad de información apropiada.
-            - Aumento en la confiabilidad de la información.
-            - Mejor servicio al cliente externo e interno
-            - Logro de ventajas competitivas.
-            - Valor agregado a un producto de la compañía.
-        
         5.1.2. Criterios de Inversión
 
-            5.1.2.1. Relación Beneficio/Costo (B/C)
-
-                En base a los costos y beneficios identificados se evalúa si es factible el desarrollo del proyecto. 
-                Si se presentan varias alternativas de solución se evaluará cada una de ellas para determinar la mejor solución desde el punto de vista del > retorno de la inversión
-                El B/C si es mayor a uno, se acepta el proyecto; si el B/C es igual a uno es indiferente aceptar o rechazar el proyecto y si el B/C es menor a uno se rechaza el proyecto
-
-            5.1.2.2. Valor Actual Neto (VAN)
-            
-                Valor actual de los beneficios netos que genera el proyecto. Si el VAN es mayor que cero, se acepta el proyecto; si el VAN es igual a cero es indiferente aceptar o rechazar el proyecto y si el VAN es menor que cero se rechaza el proyecto
-
-            5.1.2.3 Tasa Interna de Retorno (TIR)*
-                Es la tasa porcentual que indica la rentabilidad promedio anual que genera el capital invertido en el proyecto. Si la TIR es mayor que el costo de oportunidad se acepta el proyecto, si la TIR es igual al costo de oportunidad es indiferente aceptar o rechazar el proyecto, si la TIR es menor que el costo de oportunidad se rechaza el proyecto
-
-                Costo de oportunidad de capital (COK) es la tasa de interés que podría haber obtenido con el dinero invertido en el proyecto
+        - Relación Beneficio/Costo (B/C): esperada > 1 por bajo costo mensual y alto valor pedagógico.
+        - Valor Actual Neto (VAN): positivo bajo escenarios académicos; requiere seguimiento semestral.
+        - Tasa Interna de Retorno (TIR): no aplicable estrictamente en contexto académico, se evalúa por impacto educativo.
 
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
 6. <span id="_Toc52661357" class="anchor"></span>**Conclusiones**
 
-Explicar los resultados del análisis de factibilidad que nos indican si el proyecto es viable y factible.
+El proyecto es técnica y económicamente viable en un contexto académico, con costos controlados y tecnologías accesibles. Se recomienda su adopción con políticas de seguridad y uso responsable de IA, y monitoreo de costos y métricas mediante el dashboard.
