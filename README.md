@@ -8,8 +8,8 @@
 Visualiza las métricas y análisis de las herramientas de IA en nuestro dashboard interactivo:
 
 **[Ver Dashboard en Looker Studio](https://lookerstudio.google.com/reporting/a1b47e70-acaf-47ed-9c6b-125e820af759)**
-**[Ver Videos de Uso de Nuestro Proyecto]([https://lookerstudio.google.com/reporting/a1b47e70-acaf-47ed-9c6b-125e820af759](https://drive.google.com/drive/folders/1WiyfAwqPydYBr8P0TUEdvsrQDRGNiG5g?usp=sharing
-))**
+
+**[Videos de Uso de Nuestro Proyecto](https://drive.google.com/drive/folders/1WiyfAwqPydYBr8P0TUEdvsrQDRGNiG5g?usp=sharing)**
 
 **Integrantes:**
    - Carlos Daniel Ayala Ramos
