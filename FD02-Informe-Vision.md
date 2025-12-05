@@ -14,11 +14,13 @@
 
 Curso: SI885 - Sistemas de Información
 
-Docente: Por definir
+Docente:
+Mag. Patrick Cuadros Quiroga
 
 Integrantes:
-
-Ayala · Huanca · Rivera (códigos por definir)
+Rivera Muñoz Augusto (2022073505)
+Ayala Ramos Carlos (2022074266)
+Huanca Merma Gregory (2022073898)
 
 **Tacna – Perú**
 
